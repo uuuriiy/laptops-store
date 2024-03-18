@@ -14,7 +14,7 @@ import { FormLink } from './FormLink';
 import { SubmitButton } from './SubmitButton';
 
 import { RESEND_VERIFICATION_EMAIL, showPasswordInput } from '@/utils/form';
-import { breakpoints } from '@/utils/index';
+import { breakpoints, BASE_URL } from '@/utils/index';
 
 const StyledForm = styled('form')({
     width: '100%',
@@ -54,6 +54,8 @@ export const Form = () => {
         showFormLink,
         formLinkProps,
     } = useAuthForms();
+
+    console.log(BASE_URL, 'BASE');
 
     return (
         <StyledForm action={action}>
