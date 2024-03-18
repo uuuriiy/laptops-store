@@ -1,12 +1,15 @@
-'use client';
+// 'use client';
 
-import { signOut } from 'next-auth/react';
+import { Header } from '@/components/Header/Header';
 
 export default function Home() {
     return (
-        <main>
-            Hello
-            <button onClick={() => signOut()}>Sign out</button>
-        </main>
+        <>
+            <Header />
+            {/* <main>
+                Hello
+                <button onClick={() => signOut()}>Sign out</button>
+            </main> */}
+        </>
     );
 }

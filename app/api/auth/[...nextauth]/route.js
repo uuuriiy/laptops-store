@@ -5,7 +5,7 @@ import FacebookProvider from 'next-auth/providers/facebook';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { compare } from 'bcrypt';
 
-import { signInShema } from '@/utils/index';
+import { signInShema } from '@/utils/form';
 import { getUser } from '@/lib/query';
 
 const authOptions = {

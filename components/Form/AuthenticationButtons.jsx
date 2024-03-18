@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { signIn } from 'next-auth/react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import { assetsArray } from '@/utils/index';
+import { authIconsArray } from '@/utils/form';
 
 const StyledContainer = styled('div')({
     display: 'flex',
@@ -13,7 +13,7 @@ const StyledContainer = styled('div')({
 
 export const AuthenticationButtons = () => (
     <StyledContainer>
-        {assetsArray.map(({ src, alt, authentificationMethod }) => (
+        {authIconsArray.map(({ src, alt, authentificationMethod }) => (
             <Button
                 key={alt}
                 onClick={() =>

@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import CircularProgress from '@mui/material/CircularProgress';
 
 import useEmailVerify from '@/hooks/useEmailVerify';
-import { formButtonStyles } from '@/utils/index';
+import { formButtonStyles } from '@/utils/form';
 
 const StyledContainer = styled('section')({
     width: '100%',
