@@ -2,10 +2,10 @@
   "/_not-found": "app/_not-found.js",
   "/(auth)/signIn/page": "app/(auth)/signIn/page.js",
   "/(auth)/signUp/page": "app/(auth)/signUp/page.js",
-  "/(auth)/verify-email/send/page": "app/(auth)/verify-email/send/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/api/user/route": "app/api/user/route.js",
   "/(auth)/verify-email/page": "app/(auth)/verify-email/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/(auth)/verify-email/send/page": "app/(auth)/verify-email/send/page.js",
+  "/api/user/route": "app/api/user/route.js",
   "/page": "app/page.js",
   "/icon.png/route": "app/icon.png/route.js"
 }
