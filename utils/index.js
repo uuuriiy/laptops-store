@@ -3,4 +3,4 @@ export const breakpoints = {
     mobile: '@media (max-width: 767px)',
 }
 
-export const BASE_URL = process.env.NEXT_PUBLIC_URL;
+export const BASE_URL = process.env.PRODUCTION_URL;
