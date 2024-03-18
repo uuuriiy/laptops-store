@@ -55,8 +55,6 @@ export const Form = () => {
         formLinkProps,
     } = useAuthForms();
 
-    console.log(BASE_URL, 'BASE');
-
     return (
         <StyledForm action={action}>
             <FormTitle>{title}</FormTitle>

@@ -3,4 +3,7 @@ export const breakpoints = {
     mobile: '@media (max-width: 767px)',
 }
 
-export const BASE_URL = process.env.PRODUCTION_URL;
+export const BASE_URL = 
+    process.env.NODE_ENV === "development" ?
+        "http://localhost:3000"
+        : process.env.PRODUCTION_URL;
