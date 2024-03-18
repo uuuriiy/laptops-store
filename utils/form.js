@@ -1,11 +1,15 @@
 import * as zod from 'zod';
 
+import { signIn } from 'next-auth/react';
+
 import MarkEmailUnreadOutlinedIcon from '@mui/icons-material/MarkEmailUnreadOutlined';
 import MarkEmailReadOutlinedIcon from '@mui/icons-material/MarkEmailReadOutlined';
 
 import discord from '@/public/discord.png';
 import facebook from '@/public/facebook.png';
 import google from '@/public/google.png';
+
+import { isUsersEmailVerified } from '@/lib/query';
 
 const PASSWORD = 'password';
 const CONFIRM_PASSWORD = 'confirmPassword';
@@ -166,4 +170,42 @@ export const formButtonStyles = {
             transition: 'none',
         },
     },
+};
+
+export const signInAction = async (_, formData) => {
+    const { success, data, error } = signInShema.safeParse({
+        email: formData.get('email'),
+        password: formData.get('password'),
+    });
+
+    if (!success) {
+        return {
+            errors: error.flatten().fieldErrors,
+        };
+    }
+
+    try {
+        await isUsersEmailVerified(data.email);
+
+        await signIn('credentials', {
+            email: data.email,
+            password: data.password,
+            callbackUrl: '/',
+        });
+    } catch (error) {
+        if (error) {
+            switch (error.type) {
+                case 'CredentialsSignin':
+                    return {
+                        errors: 'Invalid credentials.',
+                    };
+                default:
+                    return {
+                        errors: 'Something went wrong.',
+                    };
+            }
+        }
+
+        throw error;
+    }
 };

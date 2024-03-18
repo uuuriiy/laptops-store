@@ -3,10 +3,11 @@
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useFormState } from "react-dom";
 
-import { signUpAction, resendVerificationEmailAction, signInAction } from '@/lib/action';
+import { signUpAction, resendVerificationEmailAction } from '@/lib/action';
 import { 
     FORM, SIGN_IN, 
-    SIGN_UP, RESEND_VERIFICATION_EMAIL
+    SIGN_UP, RESEND_VERIFICATION_EMAIL,
+    signInAction
 } from '@/utils/form';
 
 const useAuthForms = () => {
