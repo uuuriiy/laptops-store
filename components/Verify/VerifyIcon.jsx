@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from '@mui/material';
 
-import { emailVerifyIcons, emailIconsStylesProps } from '@/utils/index';
+import { emailVerifyIcons, emailIconsStylesProps } from '@/utils/form';
 
 export const VerifyIcon = () => {
     const path = usePathname();

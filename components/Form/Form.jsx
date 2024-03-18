@@ -13,7 +13,8 @@ import { ResendVerificationSubTitle } from './ResendVerificationSubTitle';
 import { FormLink } from './FormLink';
 import { SubmitButton } from './SubmitButton';
 
-import { RESEND_VERIFICATION_EMAIL, showPasswordInput } from '@/utils/index';
+import { RESEND_VERIFICATION_EMAIL, showPasswordInput } from '@/utils/form';
+import { breakpoints } from '@/utils/index';
 
 const StyledForm = styled('form')({
     width: '100%',
@@ -24,14 +25,14 @@ const StyledForm = styled('form')({
     gap: '25px',
     borderRadius: '10px',
 
-    '@media (max-width: 767px)': {
+    [breakpoints.mobile]: {
         gap: '20px',
         padding: '20px 30px 40px',
     },
 });
 
 export const inputMediaQueryStyles = {
-    '@media (max-width: 767px)': {
+    [breakpoints.mobile]: {
         '& .mui-14s5rfu-MuiFormLabel-root-MuiInputLabel-root': {
             fontSize: '14px',
         },

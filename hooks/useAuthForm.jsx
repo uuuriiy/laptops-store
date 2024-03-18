@@ -7,7 +7,7 @@ import { signUpAction, resendVerificationEmailAction, signInAction } from '@/lib
 import { 
     FORM, SIGN_IN, 
     SIGN_UP, RESEND_VERIFICATION_EMAIL
-} from '@/utils/index';
+} from '@/utils/form';
 
 const useAuthForms = () => {
     const pathName = usePathname();

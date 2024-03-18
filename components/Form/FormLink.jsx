@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { styled } from '@mui/material/styles';
 
+import { breakpoints } from '@/utils/index';
+
 const StyledLinkConteiner = styled('p')({
     display: 'flex',
     justifyContent: 'flex-end',
@@ -13,7 +15,7 @@ const StyledLinkConteiner = styled('p')({
         color: 'blue',
     },
 
-    '@media (max-width: 767px)': {
+    [breakpoints.mobile]: {
         fontSize: '14px',
     },
 });

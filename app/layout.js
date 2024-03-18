@@ -2,7 +2,6 @@ import { Inter } from 'next/font/google';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 import { SessionWrapper } from '@/components/SessionWrapper';
-import { Layout } from '@/components/Layout';
 
 import './globals.css';
 
@@ -18,9 +17,7 @@ export default function RootLayout({ children }) {
         <SessionWrapper>
             <html lang="en">
                 <body className={inter.className}>
-                    <AppRouterCacheProvider>
-                        <Layout>{children}</Layout>
-                    </AppRouterCacheProvider>
+                    <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
                 </body>
             </html>
         </SessionWrapper>
