@@ -31,6 +31,7 @@ const StyledContent = styled('div')({
         gridTemplateColumns: '1fr 4fr .5fr .5fr',
         gap: '10px',
         justifyItems: 'center',
+        padding: '10px 0',
     },
 });
 

@@ -18,7 +18,7 @@ const StyledLogoContainer = styled(Link)({
     },
 
     [breakpoints.mobile]: {
-        width: '60%',
+        width: '85%',
         height: '100%',
         flexGrow: 'initial',
     },

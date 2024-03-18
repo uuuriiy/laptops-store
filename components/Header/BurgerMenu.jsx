@@ -57,7 +57,7 @@ export const BurgerMenu = () => {
                 <StyledDrawerContent>
                     <StyledButtonContainer>
                         <Icon
-                            iconColor={headerIconsColor.white}
+                            iconColor={headerIconsColor.gray}
                             Icon={<CloseIcon />}
                             onClick={toggleDrawer(false)}
                         />

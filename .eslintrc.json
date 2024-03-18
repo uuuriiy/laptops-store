@@ -12,7 +12,6 @@
     "node": true
   },
   "rules": {
-    "import/no-unused-modules": ["warn", { "unusedExports": true }],
     "prettier/prettier": ["error",
       {
         "endOfLine": "auto"
