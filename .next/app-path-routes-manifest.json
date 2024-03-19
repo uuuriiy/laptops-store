@@ -1,1 +1,0 @@
-{"/_not-found":"/_not-found","/(auth)/signIn/page":"/signIn","/(auth)/signUp/page":"/signUp","/(auth)/verify-email/page":"/verify-email","/api/auth/[...nextauth]/route":"/api/auth/[...nextauth]","/(auth)/verify-email/send/page":"/verify-email/send","/api/user/route":"/api/user","/page":"/","/icon.png/route":"/icon.png"}
