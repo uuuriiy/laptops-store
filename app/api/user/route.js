@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { headers, cookies } from 'next/headers';
 import { hash } from 'bcrypt';
 import {
     sendVerificationEmail,
@@ -23,11 +22,6 @@ export async function POST(req) {
 
         const hashedPassword = await hash(password, 10);
         const verificationToken = generateEmailVerificationToken();
-        cookies().set('email, username, password', {
-            email,
-            username,
-            password,
-        });
         const { password: userPassword, ...user } = await createUser({
             username,
             email,
