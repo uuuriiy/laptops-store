@@ -28,7 +28,6 @@ export async function POST(req) {
             password: hashedPassword,
             emailVerifToken: verificationToken,
         });
-        cookies().set('user', user);
 
         await sendVerificationEmail(email, verificationToken);
         return NextResponse.json(
