@@ -6,16 +6,16 @@ import {
     generateEmailVerificationToken,
 } from '@/lib/mail';
 import { checkUserExistance, createUser } from '@/lib/query';
-export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
-    cookies().set('url', req.url);
     console.log(req.url, 'req');
     try {
         const body = await req.json();
         const { email, username, password } = body;
+        console.log(email, username, password, 'email, username, password');
 
         const isUserExist = await checkUserExistance(email, username);
+        console.log(isUserExist, 'isUserExist');
 
         if (isUserExist) {
             return NextResponse.json(
