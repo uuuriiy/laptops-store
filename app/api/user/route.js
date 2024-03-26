@@ -10,6 +10,7 @@ import { checkUserExistance, createUser } from '@/lib/query';
 export async function POST(req) {
     console.log(req.url, 'req');
     try {
+        console.log(req.json(), 'req.json()');
         const body = await req.json();
         const { email, username, password } = body;
         console.log(email, username, password, 'email, username, password');
