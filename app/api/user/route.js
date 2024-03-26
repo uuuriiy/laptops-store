@@ -6,6 +6,7 @@ import {
     generateEmailVerificationToken,
 } from '@/lib/mail';
 import { checkUserExistance, createUser } from '@/lib/query';
+export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
     cookies().set('url', req.url);
