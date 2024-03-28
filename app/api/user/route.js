@@ -8,6 +8,7 @@ import {
 import { checkUserExistance, createUser } from '@/lib/query';
 
 export async function POST(req) {
+    console.log(req.method, 'method');
     try {
         const body = await JSON.parse(req);
         // req.json();
