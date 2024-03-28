@@ -7,7 +7,8 @@ import {
 } from '@/lib/mail';
 import { checkUserExistance, createUser } from '@/lib/query';
 
-export async function POST(req) {
+export async function POST(req, res) {
+    console.log(res, 'res');
     try {
         const body = await JSON.parse(req);
         // req.json();
