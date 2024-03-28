@@ -9,6 +9,7 @@ import {
     SIGN_UP, RESEND_VERIFICATION_EMAIL,
     signInAction
 } from '@/utils/form';
+export const dynamic = 'force-dynamic';
 
 const useAuthForms = () => {
     const pathName = usePathname();
