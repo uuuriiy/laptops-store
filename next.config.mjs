@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
+  serverRuntimeConfig: {
     PRODUCTION_URL: 'https://laptops-store.vercel.app/',
   },
   experimental: { 
