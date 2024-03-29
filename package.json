@@ -17,6 +17,7 @@
     "@mui/material": "^5.15.10",
     "@mui/material-nextjs": "^5.15.9",
     "@prisma/client": "^5.11.0",
+    "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "handlebars": "^4.7.8",
     "install": "^0.13.0",
