@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverRuntimeConfig: {
-    PRODUCTION_URL: 'https://laptops-store.vercel.app/',
-  },
   experimental: { 
     serverComponentsExternalPackages: ["@prisma/client, prisma"],
   },
